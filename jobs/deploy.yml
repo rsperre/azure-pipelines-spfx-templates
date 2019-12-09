@@ -58,7 +58,7 @@ jobs:
         ##########################################
         ## upload *.sppkg to the target app catalog
         ##########################################
-        - script: o365 spo app add --filePath "$(Pipeline.Workspace)/spfx-package/$(GetSharePointPackage.SpPkgFileName)" --appCatalogUrl ${{ parameters.o365_app_catalog_site_url }} --scope ${{ parameters.o365cli_app_catalog_scope }} --overwrite ${{ parameters.o365cli_spoAppAdd_extra_arguments }}
+        - script: o365 spo app add --filePath '$(Pipeline.Workspace)/spfx-package/$(GetSharePointPackage.SpPkgFileName)' --appCatalogUrl ${{ parameters.o365_app_catalog_site_url }} --scope ${{ parameters.o365cli_app_catalog_scope }} --overwrite ${{ parameters.o365cli_spoAppAdd_extra_arguments }}
           displayName: Upload SharePoint package to Site Collection App Catalog
         ##########################################
         ## 
